@@ -31,6 +31,6 @@ def predict():
         img = img.reshape(1, 28, 28)
 
         # Predict class and render web page with the value
-        label = model.predict_classes(img)
+        label = str(model.predict_classes(img))
 
         return render_template("predict.html", label=label)
