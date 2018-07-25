@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+{% block content %}
+    <h1>
+        {% if label %}
+            {{ label }}
+        {% else %}
+            <p>Try again</p>
+        {% endif %}
+    </h1>
+{% endblock content %}

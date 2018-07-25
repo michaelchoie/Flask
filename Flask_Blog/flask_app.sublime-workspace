@@ -1,0 +1,491 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Passw",
+				"PasswordField"
+			],
+			[
+				"topoloti",
+				"topological_sort"
+			],
+			[
+				"topologi",
+				"topological_sort"
+			],
+			[
+				"sigmoid",
+				"sigmoid_cross_entropy_with_logits"
+			],
+			[
+				"input",
+				"input_text"
+			],
+			[
+				"_get",
+				"_get_gradients"
+			],
+			[
+				"var",
+				"variable_scope"
+			],
+			[
+				"initial",
+				"initial_state"
+			],
+			[
+				"vocab",
+				"vocab_size"
+			],
+			[
+				"input_data",
+				"input_data_shape"
+			],
+			[
+				"probs",
+				"probs_tensor"
+			],
+			[
+				"fin",
+				"final_state_tensor"
+			],
+			[
+				"final",
+				"Final"
+			],
+			[
+				"test_batch",
+				"test_batch_size_ph"
+			],
+			[
+				"last",
+				"last_seq_target"
+			],
+			[
+				"int_",
+				"int_to_vocab_set"
+			],
+			[
+				"vocab_to_",
+				"vocab_to_int_set"
+			],
+			[
+				"int_to",
+				"int_to_vocab_idx_set"
+			],
+			[
+				"vocab_to",
+				"vocab_to_int_idx_set"
+			],
+			[
+				"Human",
+				"HumanDetector"
+			],
+			[
+				"human_files",
+				"human_files_short"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"test",
+				"test_features"
+			],
+			[
+				"noramlize",
+				"normalize_grayscale"
+			],
+			[
+				"norma",
+				"normalize_grayscale"
+			],
+			[
+				"assert",
+				"assert_array_almost_equal"
+			],
+			[
+				"grey",
+				"greyscale_min"
+			],
+			[
+				"train",
+				"train_labels"
+			],
+			[
+				"no",
+				"notMNIST_test"
+			],
+			[
+				"uncompre",
+				"uncompress_features_labels"
+			],
+			[
+				"z",
+				"ZipFile"
+			],
+			[
+				"Sentimenet",
+				"SentimentNetwork"
+			],
+			[
+				"weights",
+				"weights_0_1"
+			],
+			[
+				"correct",
+				"correct_so_far"
+			],
+			[
+				"reviews",
+				"reviews_per_second"
+			],
+			[
+				"correc",
+				"correct_so_far"
+			],
+			[
+				"learning",
+				"learning_rate"
+			],
+			[
+				"layer",
+				"layer_0"
+			],
+			[
+				"label",
+				"label2index"
+			],
+			[
+				"la",
+				"label_vocab"
+			],
+			[
+				"revi",
+				"review_vocab"
+			],
+			[
+				"to",
+				"to_categorical"
+			],
+			[
+				"se",
+				"sequences_to_matrix"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "install pa",
+		"selected_items":
+		[
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control:In\t",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 101.0,
+		"history":
+		[
+			"trim_trailing_white_space_on_save",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App",
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/flaskapp"
+	],
+	"file_history":
+	[
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/run.py",
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/flaskapp/__init__.py",
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/app/__init__.py",
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/microblog.py",
+		"/Users/MichaelChoie/Desktop/Computer_Science/Flask_App/app/routes.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/templates/layout.html",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/__init__.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/routes.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/templates/account.html",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/templates/login.html",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/forms.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/models.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/templates/about.html",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App.sublime-project",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App.sublime-workspace",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/run.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp/templates/home.html",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/flaskapp.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App/models.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App/forms.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App/routes.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/Flask_App/__init__.py",
+		"/Users/MichaelChoie/Desktop/Computer Science/Flask_App/models.py",
+		"/Users/MichaelChoie/Desktop/Flask_App/templates/login.html",
+		"/Users/MichaelChoie/Desktop/Flask_App/templates/register.html",
+		"/Users/MichaelChoie/Desktop/Flask_App/templates/layout.html",
+		"/Users/MichaelChoie/Desktop/Flask_App/forms.py",
+		"/Users/MichaelChoie/Desktop/Flask_App/flaskapp.py",
+		"/Users/MichaelChoie/Desktop/Flask_App/templates/about.html",
+		"/Users/MichaelChoie/Desktop/Flask_App/templates/home.html",
+		"/Users/MichaelChoie/Desktop/Flask_App/static/main.css",
+		"/Users/MichaelChoie/Desktop/Flask_App/Flask_App.sublime-project",
+		"/Users/MichaelChoie/Desktop/Practice/trees_practice.py",
+		"/Users/MichaelChoie/Desktop/Practice/Stack.py",
+		"/Users/MichaelChoie/Desktop/Practice/stack_and_queue_practice.py",
+		"/Users/MichaelChoie/Desktop/Practice/linked_list_practice.py",
+		"/Users/MichaelChoie/Desktop/Practice/LinkedList.py",
+		"/Users/MichaelChoie/Desktop/LinkedList.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/7. Build Order.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/6. Successor.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/5. Validate BST.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/4. Check Balanced.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/3. List of Depths.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/2. Minimal Tree.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/1. Route between Nodes.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 4/BinaryTree.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/6. Animal Shelter.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/4. Queue via Stacks.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/5. Sort Stack.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/3. Stack of Plates.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/1. Three in One.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/2. Stack Min.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 3/Three in One.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/7. Intersection.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/6. Palindrome.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/LinkedList.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/8. Loop Detection.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/7. Intersection",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/5. Sum Lists.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/4. Partition.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/3. Delete Middle Node.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/2. Return Kth to Last.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 2/1. Remove Dups.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/9. String Rotation.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/8. Zero Matrix.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/7. Rotate Matrix.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/6. String Compression.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/5. One Away.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/4. Palindrome Permutation.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/3. URLify.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/1. Is Unique.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/2. Check Permutation.py",
+		"/Users/MichaelChoie/Desktop/Data Science Interview Prep/Cracking the Coding Interview/Chapter 1/2. Check Permutation",
+		"/Users/MichaelChoie/Desktop/# O(n)",
+		"/Users/MichaelChoie/Downloads/NeuralNetworks (1).R",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/8. Self join.sql",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/AdventureWorks.sql",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/5. The JOIN operation.sql",
+		"/Users/MichaelChoie/Downloads/RegeneronEylea (1).R",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/7. Using NULL.sql",
+		"/Users/MichaelChoie/Desktop/datatable_EDA_progresso.R",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/6. More JOIN operations.sql",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/4. SELECT within SELECT.sql",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/The JOIN operation.sql",
+		"/Users/MichaelChoie/Desktop/SQL-Zoo/More JOIN operations.sql",
+		"/Users/MichaelChoie/Desktop/4. SELECT within SELECT",
+		"/Users/MichaelChoie/Desktop/blog.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/13. dcgan/preprocess.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/13. dcgan/import_data.py",
+		"/Users/MichaelChoie/Downloads/feedback.json",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/13. dcgan/dcgan.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/12. intro_to_gans/gan_mnist.py",
+		"/Users/MichaelChoie/Desktop/intro_to_gans/gan_mnist.py",
+		"/Users/MichaelChoie/Desktop/intro_to_gans/gan_mnist_test.py",
+		"/Users/MichaelChoie/Desktop/BV_Request_2_error.txt",
+		"/Users/MichaelChoie/Desktop/BV_Request_1_error.txt",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/11. generate_tv_script/text_viz_analytics.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/11. generate_tv_script/src/preprocess.py",
+		"/Users/MichaelChoie/Desktop/text_viz_analytics.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/11. generate_tv_script/src/test_file.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/11. generate_tv_script/src/script_generator.py",
+		"/Users/MichaelChoie/Desktop/script_generator.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/generate_tv_script/src/preprocess.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/generate_tv_script/src/test_file.py",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/generate_tv_script/src/script_generator.py",
+		"/Users/MichaelChoie/Library/Application Support/Sublime Text 3/Packages/Python Flake8 Lint/Flake8Lint.sublime-settings",
+		"/Users/MichaelChoie/Library/Application Support/Sublime Text 3/Packages/User/Flake8Lint.sublime-settings",
+		"/Users/MichaelChoie/Desktop/Deep_Learning/generate_tv_script/preprocess.py",
+		"/Users/MichaelChoie/Desktop/preprocess.py",
+		"/Users/MichaelChoie/Desktop/install_requirements.sh",
+		"/Users/MichaelChoie/Desktop/PySpark/ratings-counter.py",
+		"/Users/MichaelChoie/Desktop/PySpark/ml-latest-small/ratings-counter.py",
+		"/Users/MichaelChoie/Desktop/visual_recognition.py",
+		"/Users/MichaelChoie/Desktop/visual_recognition_tutorial.py",
+		"/Users/MichaelChoie/Desktop/generate_tv_script/script_generator.py",
+		"/Users/MichaelChoie/Desktop/generate_tv_script/preprocess.py",
+		"/Users/MichaelChoie/Desktop/generate_tv_script/test_file.py",
+		"/Users/MichaelChoie/Desktop/Data Science/deep-learning/tv-script-generation/generate_tv_scripts/problem_unittests.py",
+		"/Users/MichaelChoie/Desktop/generate_tv_script/test_preprocess.py",
+		"/Users/MichaelChoie/Desktop/test_helper.py",
+		"/Users/MichaelChoie/Desktop/helper.py",
+		"/Users/MichaelChoie/Desktop/Data Science/deep-learning/tv-script-generation/generate_tv_scripts/helper.py",
+		"/Users/MichaelChoie/Desktop/Sentiment_RNN.py",
+		"/Users/MichaelChoie/Desktop/intro_to_rnns/char_rnn.py",
+		"/Users/MichaelChoie/Desktop/word2vec_practice/skipgram_word2vec.py",
+		"/Users/MichaelChoie/Desktop/word2vec_practice/helper.py",
+		"/Users/MichaelChoie/Desktop/intro_to_rnns/anna_karnna.py",
+		"/Users/MichaelChoie/Desktop/anna_karnna.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "flask_app.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Computer_Science/Flask_App/app/__init__.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
