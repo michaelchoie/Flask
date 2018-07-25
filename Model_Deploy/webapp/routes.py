@@ -27,6 +27,7 @@ def predict():
         filestr = file.read()
         npimg = np.fromstring(filestr, np.uint8)
         img = cv2.imdecode(npimg, cv2.IMREAD_GRAYSCALE)
+        img = cv2.resize(img, (28, 28), interpolation=cv2.INTER_AREA)
         img = img.astype("float32") / 255
         img = img.reshape(1, 28, 28)
 
