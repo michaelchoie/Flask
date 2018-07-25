@@ -1,2 +1,4 @@
 mnist.model.best.hdf5
 __pycache__/
+model_deploy.sublime-project
+model_deploy.sublime-workspace
