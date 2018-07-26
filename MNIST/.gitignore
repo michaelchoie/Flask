@@ -1,0 +1,6 @@
+mnist.model.best.hdf5
+__pycache__/
+testSample/
+trainingSample/
+model_deploy.sublime-project
+model_deploy.sublime-workspace

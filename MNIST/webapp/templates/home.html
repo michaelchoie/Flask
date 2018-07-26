@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Learning Flask App</title>
+        <meta charset="utf-8">
+        <!--Creates responsive/dynamic sizing-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>MNIST Web App</h1>
+        <!--action specifies what url to submit form to--->
+        <!--method specifies what http method to use to submit form-->
+        <!--enctype specifies encoding of submitted data, multitype/form-data is for file uploads-->
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <!--input is the most import form element-->
+            <!--can be displayed in many different ways given the type attribute-->
+
+            <!--type file = lets user choose from file system-->
+            <!--name = name of the file submitted-->
+            <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <br>
+            <br>
+            <!--submit = rendered as button, when clicked, submits form to server-->
+            <!--value = string displayed on button-->
+            <input type="submit" value="Predict">
+        </form>
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
