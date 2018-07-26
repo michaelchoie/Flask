@@ -3,6 +3,7 @@ import re
 import shutil
 from sklearn.model_selection import train_test_split
 from os.path import abspath
+from PIL import Image
 
 
 def _clean_dirnames(path, dl_folder):
@@ -15,17 +16,23 @@ def _clean_dirnames(path, dl_folder):
 
 
 def _clean_files(path, dl_folder):
-    '''Remove spaces and image files that are .ash'''
+    '''Remove spaces, corrupted files, and files that are .ash'''
     path = f"{path}/{dl_folder}"
     for directory in os.listdir(path):
         for file in os.listdir(f"{path}/{directory}"):
+            try:
+                Image.open(f"{path}/{directory}/{file}")
+            except:
+                os.remove(f"{path}/{directory}/{file}")
+                continue
+
             if re.search(".ash$", file) is not None:
                 os.remove(f"{path}/{directory}/{file}")
                 continue
+
             new_file = re.sub("^\d*\. ", '', file)
             os.rename(f"{path}/{directory}/{file}",
                       f"{path}/{directory}/{new_file}")
-
 
 
 def _create_partition_dirs(path):
