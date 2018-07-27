@@ -1,5 +1,6 @@
-from webapp import app
 from flask import render_template, request
+from keras.models import load_model
+from webapp import app
 
 @app.route('/')
 @app.route('/home')
@@ -7,17 +8,21 @@ def home():
     return render_template('home.html')
 
 
-def breed_detector(img_path):
-    breed, confidence = resnet50_predict_breed(img_path)
+'''
+@app.route("/predict", methods=['POST'])
+def predict()
+    if request.method == 'POST':
+        file = request.files['image']
+        if not file:
+            return render_template('home.html', label='No file')
 
-    img = cv2.imread(img_path)
-    cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    plt.imshow(cv_rgb)
-    plt.show()
+        # Read in model
+        model = load_model('best_model.hdf5')
 
-    if dog_detector(img_path):
-        print("Prediction: Dog \nBreed: %s \nConfidence level: %.4f%%" % (str(breed), confidence))
-    elif face_detector(img_path):
-        print("Prediction: Human \nMost similar dog breed: %s \nConfidence level of breed similarity: %.4f%%" % (str(breed), confidence))
-    else:
-        print("CNN cannot predict what that is. \nMost similar dog breed: %s \nConfidence level of breed similarity: %.4f%%" % (str(breed), confidence))
+        # Read in image and preprocess for CNN input
+
+        # Predict class and render web page with the value
+        label = str(model.predict_classes(img))
+
+        return render_template("predict.html", label=label)
+'''

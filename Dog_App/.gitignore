@@ -1,2 +1,4 @@
 downloads/
 dog_images/
+best_model.hdf5
+__pycache__/
