@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+import warnings
 from sklearn.model_selection import train_test_split
 from os.path import abspath
 from PIL import Image
@@ -17,6 +18,8 @@ def _clean_dirnames(path, dl_folder):
 
 def _clean_files(path, dl_folder):
     '''Remove spaces, corrupted files, and files that are .ash'''
+    warnings.filterwarnings('error', message='Corrupt EXIF data.', category=UserWarning)
+
     path = f"{path}/{dl_folder}"
     for directory in os.listdir(path):
         for file in os.listdir(f"{path}/{directory}"):

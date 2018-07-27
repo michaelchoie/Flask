@@ -6,7 +6,7 @@
 
 ### Prepping Data:
 - Some of the images that are downloaded were corrupted
-    - Identified problem files using exception handling and removed
+    - Identified problem files using exception/warning handling and removed
 - Fixed the names of the directories containing the dog images
     - Each dog breed has its own directory
     - The name of the dirs are the search string I used with the API
