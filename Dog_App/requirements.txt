@@ -185,6 +185,7 @@ scipy==1.0.0
 Scrapy==1.5.0
 seaborn==0.8.1
 selenium==3.13.0
+Send2Trash==1.5.0
 service-identity==17.0.0
 simplegeneric==0.8.1
 singledispatch==3.4.0.3

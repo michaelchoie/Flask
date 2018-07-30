@@ -2,3 +2,6 @@ downloads/
 dog_images/
 best_model.hdf5
 __pycache__/
+.vagrant/
+Vagrantfile
+ubuntu-xenial-16.04-cloudimg-console.log
