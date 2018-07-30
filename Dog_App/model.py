@@ -50,12 +50,9 @@ def _preprocess_images(paths):
         try:
             tensor = _preprocess_image(path)
         except:
-            print(f"Converting transparent image, {path}, to JPG")
-            img = Image.open(path)
-            rgb_img = img.convert('RGB')
-            path = re.sub('.png$', '.jpg', path)
-            rgb_img.save(path)
-            tensor = _preprocess_image(path)
+            print(f"Removing {path}")
+            os.remove(path)
+            continue
 
         list_of_images.append(tensor)
 
@@ -96,7 +93,7 @@ def _train_model(model, files, targets):
 
     model.fit(files[0], targets[0],
               validation_data=(files[1], targets[1]),
-              epochs=1, batch_size=256, callbacks=[checkpointer],
+              epochs=3, batch_size=256, callbacks=[checkpointer],
               verbose=1)
 
     print("Model trained and saved.")
@@ -106,7 +103,7 @@ def _test_model(model, test):
     '''Test the model'''
 
     pred = [np.argmax(model.predict(np.expand_dims(file, axis=0))) for file in test]
-    test_accuracy = round(100 * np.equal(np.array(pred), np.argmax(targets[2], axis=1)) / len(pred), 2)
+    test_accuracy = round(100 * np.equal(np.array(pred), np.argmax(targets, axis=1)) / len(pred), 2)
 
     print(f"This model has a test accuracy of {test_accuracy}%")
 

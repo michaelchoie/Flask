@@ -7,9 +7,8 @@
 ### Prepping Data:
 - Some of the images that are downloaded were corrupted
     - Identified problem files using exception handling and removed
-- Cleaned the files so that only .jpg, .jpeg, and .png remained and removed white space
-- Some png files were transparent, which doesn't work well with ML libraries
-    - Converted these files into jpg
+- Cleaned the files so that only .jpg and .jpeg remained and removed white space
+    - Some png files were transparent, which doesn't work well with ML libraries
 - Fixed the names of the directories containing the dog images
     - Each dog breed has its own directory
     - The name of the dirs are the search string I used with the API
@@ -22,7 +21,7 @@ I used the Resnet50 CNN to conduct transfer learning and trained my model to rec
 
 The CNN architecture works well for image recognition because it retains spatial information while also accounting for processing time and in-memory storage.
 
-Each of our convolutional layers use the "elu" activation function as these are fast, account for vanishing gradients, and resolve the issue of ReLU not returning a mean activation function of 0. For every convolutional layer added, we add a pooling layer to reduce the dimensions of each of the filter maps (pool_size = 2 means that we are reducing height and width by 50%), which increases processing speed and decreases the amount of data we must hold in memory. We also add in batch normalization layers to mitigate problems from internal covariate shifts. For the purposes of performing a quick classification on the data, we add a global average pooling layer to reduce the dimensionality even more prior to the fully connected layers to increase the speed at which we can process the images. We finally add in a fully connected layer with a softmax function to return probabilities of dog breed.
+For the sake of time, I added a global average pooling layer to reduce the dimensions of each of the filter maps, which increases processing speed and decreases the amount of data we must hold in memory. I also added in a batch normalization layer to mitigate internal covariate shift.  Finally, I added in a fully connected layer with a softmax function to return probabilities of dog breed.
 
 ### Training Model:
 I noticed that the train time on my mac was extremely slow - one epoch would take over an hour.
@@ -43,11 +42,31 @@ X.X.X.X = ipv4 public ip
 Used vim in order to edit files in SSH
 
 ### Productionalizing Model:
-Used a Flask app to create a simple UI to service my ML predictions
+Used a Flask app to create a simple UI to service my ML predictions.
+The default web servers provided by popular web frameworks like Django or Flask are optimized for development but perform poorly on production.
+When interfacing with the real world, you must account for slow clients, scalability, asynchronous I/O, and other optimizations.
+That is what Nginx and Gunicorn are for - making Python web apps production ready.
 
-### Data Storage:
-I store the results of my predictions to get an idea of how well my app is doing in production in a SQLite database
+Backend has a 3 tier architecture:
+    1) Nginx = outermost layer
+    2) Gunicorn = middle layer
+    3) Database/Python app that connects to DB = inner layer
+
+I don't have a dedicated server so I used Vagrant and VirtualBox to emulate a server from my local.
+
+nginx = server that accepts requests and forwards them to the application
+    responsible for serving static content and HTTP stuff
+    load balancer, cache, proxy, reverse proxy, etc.
+gunicorn = production web server for Python applications
+    Interfaces w/ nginx and python code to serve dynamic content
+    
+Typically, nginx will serve HTTP requests, but if the url is dynamic, nginx forwards the request to gunicorn (this way, slower clients can be served differently)
+
+Gunicorn returns a response to nginx which in turn sends the response to the client
+
+#### Data Storage:
+I store the results of my predictions to get an idea of how well my app is doing in production in a MongoDB database (responses are stored as json)
 
 ### Front End:
-Utilized HTML, CSS, Javascript, Bootstrap to make the website more user friendly
+Utilized HTML, CSS, Javascript, AJAX, Bootstrap to make the website more user friendly
 
