@@ -5,3 +5,5 @@ __pycache__/
 .vagrant/
 Vagrantfile
 ubuntu-xenial-16.04-cloudimg-console.log
+dog_app.sublime-project
+dog_app.sublime-workspace
