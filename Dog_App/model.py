@@ -99,11 +99,11 @@ def _train_model(model, files, targets):
     print("Model trained and saved.")
 
 
-def _test_model(model, test):
+def _test_model(model, test, targets):
     '''Test the model'''
 
     pred = [np.argmax(model.predict(np.expand_dims(file, axis=0))) for file in test]
-    test_accuracy = round(100 * np.equal(np.array(pred), np.argmax(targets, axis=1)) / len(pred), 2)
+    test_accuracy = np.round(100 * np.sum(np.equal(np.array(pred), np.argmax(targets, axis=1))) / len(pred), 2)
 
     print(f"This model has a test accuracy of {test_accuracy}%")
 
@@ -118,7 +118,7 @@ def output_result(path, img_folder):
 
     model = _create_model(path)
     _train_model(model, files, targets)
-    _test_model(model, files[2])
+    _test_model(model, files[2], targets[2])
 
 
 if __name__ == "__main__":

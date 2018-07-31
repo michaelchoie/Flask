@@ -1,8 +1,28 @@
+<!--
 {% extends 'home.html' %}
 {% block content %}
     <h3>
-        {% if label %}
-            Your dog breed is {{ label }}
-        {% endif %}
+        <div>
+            {% if label %}
+                Your dog breed is {{ label }}
+            {% endif %}
+        </div>
+        <div>
+            {% if dog % }
+                <div>Your dog breed looks like this:</div>
+                <img src="{{ dog }}" alt = "Dog Image">
+            {% endif %}
+        </div>
+        <div>
+            {% if prob % }
+                We calculated this with {{ prob }} confidence
+            {% endif %}
+        </div>
     </h3>
 {% endblock content %}
+-->
+<!--
+{% extends 'home.html' %}
+{% block content %}
+    {{ }}
+    -->
