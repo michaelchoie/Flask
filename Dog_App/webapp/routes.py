@@ -35,7 +35,7 @@ def predict():
         dog_breed = os.listdir('./dog_images/train')
         pred = model.predict(x)
         index = np.argmax(pred)
-        prob = np.asscalar(np.round(np.max(pred), 2))
+        prob = round(np.asscalar(np.max(pred)), 2)
 
         return jsonify({
             'prediction_result': {

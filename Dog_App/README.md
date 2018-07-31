@@ -25,10 +25,9 @@ For the sake of time, I added a global average pooling layer to reduce the dimen
 
 ### Training Model:
 I noticed that the train time on my mac was extremely slow - one epoch would take over an hour.
-However, my accuracy rate on the test set after only one epoch was ~35%, which showcases how well the transfer learning model does straight out of the box.
+However, my accuracy rate on the test set after only one epoch was ~35%, which showcases how well the transfer learning model does straight out of the box
 
-Decided to instantiate an AWS EC2 cluster and ssh into it to parallelize my training process.
-Afterwards I transferred my completed model from the cluster to my local using SCP (secure copy)
+Decided to instantiate an AWS EC2 cluster and ssh into it to parallelize my training process. Afterwards I transferred my completed model from the cluster to my local using SCP (secure copy)
 
 Choose an AMI (Amazon Machine Image) which defines the OS of the instance and contains the environment files/drivers needed to train on a GPU
 
@@ -59,10 +58,24 @@ nginx = server that accepts requests and forwards them to the application
     load balancer, cache, proxy, reverse proxy, etc.
 gunicorn = production web server for Python applications
     Interfaces w/ nginx and python code to serve dynamic content
-    
+
 Typically, nginx will serve HTTP requests, but if the url is dynamic, nginx forwards the request to gunicorn (this way, slower clients can be served differently)
 
 Gunicorn returns a response to nginx which in turn sends the response to the client
+
+To build image:
+docker build -t dog_app:latest .
+    -t = gives the docker build command the name and tag for the new container image
+    . = indicates the base dir where container is to be built
+
+To run:
+docker run --name dog_app -d -p 8000:5000 --rm dog_app:latest
+    --name = name for new container
+    -d = run container in background
+    -p = maps container ports to host ports
+    --rm = remove container once it is terminated
+        This is beacuse containers that are finished are usually not needed anymore
+        dog_app:latest = container image name and tag to use for container
 
 #### Data Storage:
 I store the results of my predictions to get an idea of how well my app is doing in production in a MongoDB database (responses are stored as json)
