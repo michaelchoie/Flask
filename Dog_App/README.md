@@ -29,57 +29,9 @@ However, my accuracy rate on the test set after only one epoch was ~35%, which s
 
 Decided to instantiate an AWS EC2 cluster and ssh into it to parallelize my training process. Afterwards I transferred my completed model from the cluster to my local using SCP (secure copy)
 
-Choose an AMI (Amazon Machine Image) which defines the OS of the instance and contains the environment files/drivers needed to train on a GPU
-
-EC2 - p2.xlarge instances for GPU instances [GPU Compute]
-
-Will receieve an authentication key pair
-
-ssh -i YourKeyName.pem ubuntu@X.X.X.X
-X.X.X.X = ipv4 public ip
-
-Used vim in order to edit files in SSH
-
-### Productionalizing Model:
-Used a Flask app to create a simple UI to service my ML predictions.
-The default web servers provided by popular web frameworks like Django or Flask are optimized for development but perform poorly on production.
-When interfacing with the real world, you must account for slow clients, scalability, asynchronous I/O, and other optimizations.
-That is what Nginx and Gunicorn are for - making Python web apps production ready.
-
-Backend has a 3 tier architecture:
-    1) Nginx = outermost layer
-    2) Gunicorn = middle layer
-    3) Database/Python app that connects to DB = inner layer
-
-I don't have a dedicated server so I used Vagrant and VirtualBox to emulate a server from my local.
-
-nginx = server that accepts requests and forwards them to the application
-    responsible for serving static content and HTTP stuff
-    load balancer, cache, proxy, reverse proxy, etc.
-gunicorn = production web server for Python applications
-    Interfaces w/ nginx and python code to serve dynamic content
-
-Typically, nginx will serve HTTP requests, but if the url is dynamic, nginx forwards the request to gunicorn (this way, slower clients can be served differently)
-
-Gunicorn returns a response to nginx which in turn sends the response to the client
-
-To build image:
-docker build -t dog_app:latest .
-    -t = gives the docker build command the name and tag for the new container image
-    . = indicates the base dir where container is to be built
-
-To run:
-docker run --name dog_app -d -p 8000:5000 --rm dog_app:latest
-    --name = name for new container
-    -d = run container in background
-    -p = maps container ports to host ports
-    --rm = remove container once it is terminated
-        This is beacuse containers that are finished are usually not needed anymore
-        dog_app:latest = container image name and tag to use for container
-
-#### Data Storage:
-I store the results of my predictions to get an idea of how well my app is doing in production in a MongoDB database (responses are stored as json)
+### Database:
+Used a mysql database to store the response data
 
 ### Front End:
-Utilized HTML, CSS, Javascript, AJAX, Bootstrap to make the website more user friendly
+Utilized Flask to create an API Endpoint for this service
 

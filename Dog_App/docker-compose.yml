@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    dog_app:
+      restart: always
+      build: ./
+      ports:
+        - "5000:5000"
+      links:
+        - mysql
+
+
+    mysql:
+        restart: always
+        image: mysql:latest
+        ports:
+          - "3306:3306"
+        environment:
+          MYSQL_DATABASE: test
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: 0.0.0.0
+          MYSQL_USER: testing
+          MYSQL_PASSWORD: testing
+        volumes:
+          - ./db:/docker-entrypoint-initdb.d/:ro
+

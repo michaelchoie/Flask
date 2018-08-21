@@ -4,7 +4,7 @@ import os
 from flask import render_template, request, jsonify
 from keras.models import load_model
 from keras.preprocessing import image
-from webapp import app
+from webapp import app, mysql
 
 
 @app.route('/')
@@ -36,10 +36,19 @@ def predict():
         pred = model.predict(x)
         index = np.argmax(pred)
         prob = round(np.asscalar(np.max(pred)), 2)
+        breed = dog_breed[index]
+
+        # Store predictions in database
+        con = mysql.connect()
+        cur = con.cursor()
+        sql = f"INSERT INTO Predictions (Breed, Probability) VALUES ('{breed}', {prob})"
+        cur.execute(sql)
+        con.commit()
+        con.close()
 
         return jsonify({
             'prediction_result': {
-                'Dog Breed': dog_breed[index],
+                'Dog Breed': breed,
                 'Probability': prob
             }
         })
